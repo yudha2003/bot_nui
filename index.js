@@ -6,7 +6,7 @@ const port = 3000;
 
 app.use(express.json());
 
-async function order(url, formData) {
+async function orders(url, formData) {
   // Memulai browser Chromium
   const browser = await chromium.launch({ headless: false });
 
@@ -42,7 +42,7 @@ async function order(url, formData) {
   // await browser.close();
 }
 app.post("/submit-form", async (req, res) => {
-  order();
+  orders();
 });
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
