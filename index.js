@@ -33,6 +33,7 @@ async function order(url, formData) {
   const selectElement = await page.$("select#duration");
 
   await selectElement.selectOption({ value: "7" });
+  console.log("berhasil");
   // // Menutup browser
 
   // const htmlContent = await page.content();
