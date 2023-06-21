@@ -2,7 +2,7 @@ const { chromium } = require("@playwright/test");
 const express = require("express");
 const app = express();
 const fs = require("fs");
-const port = 3000;
+const port = 2000;
 
 app.use(express.json());
 
@@ -13,7 +13,7 @@ async function orders(url, formData) {
   // Membuka halaman baru
   const context = await browser.newContext();
   const page = await context.newPage();
-  await page.goto("file:///C:/xampp/htdocs/playwright/ordernui/output.html");
+  await page.goto(__dirname + "/output.html");
   // await page.fill("#username", "kyynibos");
   // await page.fill("#password", "dgstoreid");
   // await page.click('button[type="submit"]');
