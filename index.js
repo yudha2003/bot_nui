@@ -20,11 +20,11 @@ async function orders(url, formData) {
         element.textContent.trim()
       );
       const data = { status: true, key: keySensi };
-      res.status(200).json(data);
+      console.log(data);
     }
   } else {
     const data = { status: false, key: null };
-    res.status(404).json(data);
+    console.log(data);
   }
 }
 app.post("/submit-form", async (req, res) => {
